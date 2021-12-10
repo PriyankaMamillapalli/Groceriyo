@@ -1,0 +1,81 @@
+<!DOCTYPE html>    
+<html>   
+<head>    
+<title>Forget Password</title>    
+<link rel="stylesheet" type="text/css" href="forpass.css">    
+</head>
+<body>  
+<style>
+body  
+{  
+margin: 0;  
+padding: 0;  
+background-color:whitesmoke;  
+font-family: 'Arial';  
+}  
+.login{  
+width: 350px;  
+overflow: hidden;  
+margin: auto;  
+margin: 20 0 0 450px;  
+padding: 80px;  
+border-radius: 15px ;
+align-items: center;        
+}  
+h2{  
+text-align: center;  
+color: black;  
+padding: 20px;  
+border-bottom: 2px solid black;
+}  
+label{  
+color:black;  
+font-size: 17px;  
+}  
+#Uname{  
+width: 350px;  
+height: 40px;  
+border: black;  
+border-radius: 3px;  
+padding-left: 8px;  
+font-size: 20px;
+border-bottom: 2px solid black;
+background: transparent;
+}  
+span{  
+color: black;  
+font-size: 17px;  
+}  
+a{  
+float: right;  
+background-color: black;  
+}  
+button{
+width: 350px;
+height: 40px;
+font-size: 20px;
+background-color:#27ae60;
+border: none;
+color: white;
+margin-top: 20px;
+border-radius: 25px;
+}
+</style>
+<script>
+    function myFunction() {
+      alert("Reset link has been sent to your Mail.");
+    }
+    </script>
+    <div class="login">
+    <h2>Forget Password</h2><br>    
+    <form id="login" method="get" onsubmit="myFunction()">
+    <label>Please Enter Your E-mail address to search for your account :<br>    
+        </br>    
+        </label>    
+        <input type="email" name="Uname" id="Uname" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.com" required title="Eg:abc@gmail.com">           
+        <br><br>    
+        <button type="submit">submit</button>
+    </form>    
+</div>    
+</body>    
+</html>    

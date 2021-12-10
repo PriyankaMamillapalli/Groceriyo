@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css"> 
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+</head>
+<body style="background-color: whitesmoke;">
+    <header class="header">
+    <a href="/fruits" class="logo"> <i class="fas fa-shopping-basket"></i> Groceriyo </a>
+    <nav class="navbar" style="padding-right: 1.5cm ;">
+    <a href="#">Dashboard</a>
+    <a href="addproduct.html">Add product</a>
+    <a href="updateproduct.html">Update Product</a>
+    <a href="deleteproduct.html">Delete Product</a>
+    </nav>
+    <div class="icons" style="font-size:18px; color:#27ae60" >
+    <a href="index.html" class="fas fa-user" id="login-btn">      </a>
+    Logout
+</div>
+</header>
+ <center>  
+<br><br><br><br><br><br><br><br><br>
+<iframe src="/product" height="380" width="840"></iframe>
+</center> 
+<!-- footer starts  -->
+<div class="Cart-Container" style="background-color: whitesmoke;"><br><br></div>
+ <section class="footer">
+<div class="box-container">
+<div class="box">
+    <h3>Groceriyo <i class="fas fa-shopping-basket"></i> </h3>
+    <p>A complete place for the complete shopping.<br><br>  You can Follow us on:</p>          
+    <div class="share">
+                    <a href="https://www.facebook.com/login.php" class="fab fa-facebook-f"></a>
+                    <a href="https://twitter.com/?lang=en" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+                    <a href="https://www.linkedin.com/login" class="fab fa-linkedin"></a>
+            </div>
+            </div>
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> 8946348341 </a>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +987-863-7383 </a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> Groceriyo@gmail.com </a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Vijaywada, India - 520001 </a>
+            </div>
+    <div class="box">
+        <h3>Customer Services </h3>
+        <a href="aboutus.html" class="links"><i class="fas fa-arrow-right"></i>About Us</a>
+        <a href="terms.html" class="links"><i class="fas fa-arrow-right"></i>Terms & Conditions</a>
+        <a href="privacy.html" class="links"><i class="fas fa-arrow-right"></i>Privacy Policy</a>
+    </div>
+    <script>
+        function myFunction() {
+          alert("Thanks for Subscribing!!");}
+        </script>
+            <div class="box">
+                <form class="container" id="myForm"   onsubmit="myFunction()">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <input type="email" placeholder="your email" class="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.com" required title="Eg:abc@gmail.com">
+                <input type="submit" value="subscribe" class="btn">
+                <img src="image\payment.png" class="payment-img" alt="">
+                </form>
+            </div></div>
+    <div class="credit"> Created by <span>Groceriyo Team</span> | all rights reserved </div>    
+</section>
+<!-- footer ends -->      
+</body>
+</html>

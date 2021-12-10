@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    </head>
+    <body style="background-color: whitesmoke;">
+        <header class="header">
+            <a href="/fruits" class="logo"> <i class="fas fa-shopping-basket"></i> Groceriyo </a>
+            <nav class="navbar" style="padding-right: 1.5cm ;">
+                <a href="admin.html">Dashboard</a>
+                <a href="addproduct.html">Add product</a>
+              <a href="updateproduct.html">Update Product</a>
+                <a href="#">Delete Product</a>
+            </nav>
+            <div class="icons" style="font-size:18px; color:#27ae60" >
+            <a href="index.html" class="fas fa-user" id="login-btn">      </a>
+            Logout
+        </div>
+       </header>
+       <br><br><br><br>
+<style>
+body{
+display: flex;
+flex-direction: column;
+background-color: whitesmoke;
+background-repeat: no-repeat;
+background-attachment: fixed; 
+background-size: 100% 100%;
+font-size: 25px;  
+}
+input {
+border: 2px  solid  #27ae60;
+width: 50%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border-radius: 4px;
+background-color: whitesmoke;
+}
+select{
+border: 2px  solid  #27ae60;
+width: 50%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+background-color: whitesmoke;
+border-radius: 4px;
+}
+button{
+width: 350px;
+height: 40px;
+font-size: 20px;
+background-color: #27ae60;
+border: none;
+color:black;
+cursor: pointer;
+margin-top: 20px;
+border-radius: 6px;
+}
+form{
+background-color: rgb(216, 245, 216); width:20cm;
+padding-left: 2.5cm;
+padding-top: 2cm;
+border-radius:5%;
+align-self: center;
+}
+</style>
+    <form class="form-body" action="/del-product" method="post">
+        <label for="pname">Product name: </label>
+        <input type="text" id="pname" name="pname" ><br><br>
+        <div style="padding-left:2.5cm">
+        <button type="submit"  >Delete Product</button><br><br></div>
+    </form> 
+    
+<!-- footer starts  -->
+<div class="Cart-Container" style="background-color: whitesmoke;"><br><br></div>
+<section class="footer">
+<div class="box-container">
+<div class="box">
+                <h3>Groceriyo <i class="fas fa-shopping-basket"></i> </h3>
+                <p>A complete place for the complete shopping.<br><br>  You can Follow us on:</p>               
+                <div class="share">
+                    <a href="https://www.facebook.com/login.php" class="fab fa-facebook-f"></a>
+                    <a href="https://twitter.com/?lang=en" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+                    <a href="https://www.linkedin.com/login" class="fab fa-linkedin"></a>
+                </div></div>
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> 8946348341 </a>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +987-863-7383 </a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> Groceriyo@gmail.com </a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Vijaywada, India - 520001 </a>
+            </div> 
+    <div class="box">
+        <h3>Customer Services </h3>
+        <a href="aboutus.html" class="links"><i class="fas fa-arrow-right"></i>About Us</a>
+        <a href="terms.html" class="links"><i class="fas fa-arrow-right"></i>Terms & Conditions</a>
+        <a href="privacy.html" class="links"><i class="fas fa-arrow-right"></i>Privacy Policy</a>
+    </div>
+        </div>    
+        <div class="credit"> Created by <span>Groceriyo Team</span> | all rights reserved </div>    
+    </section>
+<!-- footer ends -->
+</body>
+</html>
