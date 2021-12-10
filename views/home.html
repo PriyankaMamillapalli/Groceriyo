@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Grocery Store</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/store.js"></script>
+</head>
+<body>
+<!-- header section starts  -->
+<header class="header">
+<a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> Groceriyo </a>
+<nav class="navbar">
+    <a href="#">home</a>
+    <a href="#features">features</a>
+<div class="dropdown" id="categories">
+    <a href="#">Catergories
+    <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content">
+        <a href="/fruits#fruits">Fruits</a>
+        <a href="/vegetables#vegetables">vegetables</a>
+        <a href="/staples#staples">Staples</a>
+        <a href="/snacks#staples">Snacks</a>
+        <a href="/dairy#dairy">Dairy</a>
+        <a href="/meat#meat">Meat</a>
+    </div>
+    </div> 
+        <a href="#review">review</a>
+</nav>
+<div class="icons" >
+    <div class="fas fa-bars" id="menu-btn"></div>
+    <a href="#search" class="fas fa-search" id="search-btn"></a>
+    <a href="#order" class="fas fa-shopping-cart" id="cart-btn"></a>
+    <div class="fas fa-user" id="login-btn">            
+    </div>
+    <a href="checkout.html" class="fab fa-amazon-pay"></a>
+    </div>
+<form action="/logout" class="login-form" method="get">
+    <button >Logout</button><br><br>       
+</form>       
+</header>
+<!-- header section ends -->
+<!-- carousel section starts  -->
+<div class="slideshow-container" id="home" >
+<div class="mySlides fade">
+    <img src="image\vegbanner.png" style="width:100%">
+    <div class="text-block"><p>
+        Celebrate With only the<br><span style="color:#27ae60"> Best Ingredients</span> you can find.</p>
+        <a href="/vegetables#vegetables" class="button" style="text-align:center" >shop now</a>
+    </div>    
+    </div>
+</div>
+<!-- carousel section ends  -->
+<!-- features section starts  -->
+<section class="features" id="features">
+    <h1 class="heading"> our <span>features</span> </h1>
+    <div class="box-container" id="feature">
+        <div class="box">
+            <img src="image\freshorg.jpg" alt="">
+            <h3>fresh and organic</h3>
+            <p>We take a very important step in protecting our soils, our farmers, and our families. </p>
+            <a href="freshorganic.html" class="btn">Read more</a>
+        </div>
+        <div class="box">
+            <img src="image\homedelivery.png" alt="">
+            <h3>Free Delivery</h3>
+            <p>Save time, save money, and come home to a fully stocked fridge with quick delivery.</p>
+            <a href="delivery.html" class="btn">Read more</a>
+        </div>
+        <div class="box">
+            <img src="image\easypayment.jfif" alt="">
+            <h3>Easy payments</h3>
+            <p>Spend more time living your life and less time worrying about paying off your bills.</p>
+            <a href="payments.html" class="btn">read more</a>
+        </div>
+    </div>
+</section>
+<!-- features section ends -->
+<h1 class="heading" > Our <span>Search</span> </h1>
+<section class="categories" id="categories">
+<form action="/search#search" method="get" >
+<div id="seach-box">
+<center> <input type="search" id="search" name="search" placeholder="search here...">
+<button type="submit" class="searchButton">
+<i class="fa fa-search fa-2x" style="color: #27ae60"></i>
+</button></center><br></div>
+<div class="box-container">   
+    {{#search}}     
+    <div class="box shop-item">
+        <img src="image\{{File input}}"  class="shop-item-image" alt="">
+        <h3 class="shop-item-title">{{Product name}}</h3>
+        <div class="shop-item-details">
+            <div class="strike-price"> ₹{{Sprice}}/Kg </div>
+       <div class="price"> ₹<span class="price shop-item-price">{{Price}}</span>/Kg</div>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+         </div><br>
+            <a href="#shopping-cart" class="btn shop-item-button btn-primary" >add to cart</a> </div>   
+        </div>  
+        {{/search}} 
+    </div>   
+</form>
+<!-- Product section Starts-->
+<!-- fruits category starts-->
+    <br><br><h1 class="heading" id="fruits"> Fruits <span>Category</span> </h1> 
+    <form method="get" action="/fruits">   
+    <div class="box-container">   
+        {{#fruits}}     
+        <div class="box shop-item">
+            <img src="image\{{File input}}"  class="shop-item-image" alt="">
+            <h3 class="shop-item-title">{{Product name}}</h3>           
+            <div class="shop-item-details">
+                <div class="strike-price"> ₹{{Sprice}}/Kg </div>
+           <div class="price"> ₹<span class="price shop-item-price">{{Price}}</span>/Kg</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+             </div><br> 
+            <a href="#shopping-cart" class="btn shop-item-button btn-primary" >add to cart</a> </div>       
+            </div>  
+            {{/fruits}} 
+</div>
+</form> 
+</section>
+<!-- fruits category ends-->
+
+<!-- vegetables category starts  -->
+<section class="categories" id="categories">
+    <h1 class="heading" id="vegetables"> Vegetables <span>Category</span> </h1>    
+    <form method="get" action="/vegetables">      
+    <div class="box-container"> 
+        {{#vegetables}}     
+        <div class="box shop-item">
+            <img src="image\{{File input}}"  class="shop-item-image" alt="">
+            <h3 class="shop-item-title">{{Product name}}</h3>           
+            <div class="shop-item-details">
+                <div class="strike-price"> ₹{{Sprice}}/Kg </div>
+           <div class="price"> ₹<span class="price shop-item-price">{{Price}}</span>/Kg</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+             </div><br> 
+            <a href="#shopping-cart" class="btn shop-item-button btn-primary" >add to cart</a> </div>       
+            </div>  
+            {{/vegetables}}       
+</div>
+</form>
+</section>
+<!-- vegetables category ends -->
+
+<!-- staples category starts -->
+<section class="categories" id="categories">
+    <h1 class="heading" id="staples">Staples <span>Category</span> </h1>   
+    <form method="get" action="/staples"> 
+    <div class="box-container">       
+        {{#staples}}     
+        <div class="box shop-item">
+            <img src="image\{{File input}}"  class="shop-item-image" alt="">
+            <h3 class="shop-item-title">{{Product name}}</h3>           
+            <div class="shop-item-details">
+                <div class="strike-price"> ₹{{Sprice}}/Kg </div>
+           <div class="price"> ₹<span class="price shop-item-price">{{Price}}</span>/Kg</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+             </div><br> 
+                <a href="#shopping-cart" class="btn shop-item-button btn-primary" >add to cart</a> </div>       
+            </div>  
+            {{/staples}}         
+</div>
+</form>
+</section>
+<!-- staples category ends -->
+
+<!-- snacks category starts -->
+<div id="snacks">
+<section class="categories" id="categories">
+    <h1 class="heading" id="snacks">Snacks<span>Category</span> </h1>  
+    <form method="get" action="/snacks"> 
+    <div class="box-container ">
+        {{#snacks}}     
+        <div class="box shop-item">
+            <img src="image\{{File input}}"  class="shop-item-image" alt="">
+            <h3 class="shop-item-title">{{Product name}}</h3>           
+            <div class="shop-item-details">
+                <div class="strike-price"> ₹{{Sprice}}/Kg </div>
+           <div class="price"> ₹<span class="price shop-item-price">{{Price}}</span>/Kg</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+             </div><br> 
+                <a href="#shopping-cart" class="btn shop-item-button btn-primary" >add to cart</a> </div>       
+            </div>  
+            {{/snacks}}  
+</div>
+</form>
+</section>
+<!-- snacks category ends -->
+
+<!-- dairy category starts -->
+<div id="dairy">
+<section class="categories" id="categories">
+    <h1 class="heading" id="dairy">Dairy <span>Category</span> </h1>
+    <form method="get" action="/dairy"> 
+    <div class="box-container">
+        {{#dairy}}     
+        <div class="box shop-item">
+            <img src="image\{{File input}}"  class="shop-item-image" alt="">
+            <h3 class="shop-item-title">{{Product name}}</h3>           
+            <div class="shop-item-details">
+                <div class="strike-price"> ₹{{Sprice}}/Kg </div>
+           <div class="price"> ₹<span class="price shop-item-price">{{Price}}</span>/Kg</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+             </div><br> 
+            <a href="#shopping-cart" class="btn shop-item-button btn-primary" >add to cart</a> </div>       
+            </div>  
+            {{/dairy}}  
+</div>
+</form>
+</section>
+<!-- dairy category ends -->
+
+<!-- meat category starts -->
+<div id="meat">
+<section class="categories" id="categories">
+    <h1 class="heading" id="meat">Meat <span>Category</span> </h1>
+    <form method="get" action="/meat"> 
+    <div class="box-container">
+        {{#meat}}     
+        <div class="box shop-item">
+            <img src="image\{{File input}}"  class="shop-item-image" alt="">
+            <h3 class="shop-item-title">{{Product name}}</h3>           
+            <div class="shop-item-details">
+                <div class="strike-price"> ₹{{Sprice}}/Kg </div>
+           <div class="price"> ₹<span class="price shop-item-price">{{Price}}</span>/Kg</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+             </div><br> 
+            <a href="#shopping-cart" class="btn shop-item-button btn-primary" >add to cart</a> </div>       
+            </div>  
+            {{/meat}}          
+</div>
+</form>
+</section>
+<!-- meat category ends -->
+<!-- product section ends  -->
+
+<!-- review section starts  -->
+<section class="review" id="review">
+    <h1 class="heading"> customer's <span>review</span> </h1>
+    <div class="swiper review-slider">
+        <div class="swiper-wrapper" id="reviews">
+            <div class="swiper-slide box">
+                <img src="image\MicrosoftTeams-image (4).png" alt="">
+                <p>Reliable, quick and hassle free groceries.
+                    I always find what I am looking for and the delivery is quick.Get healthy by thinking about it. great fresh stuff at reasonable prices. </p>
+                <h3>Akilesh</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image\MicrosoftTeams-image (5).png" alt="">
+                <p>My order was delivered quickly and efficiently. The packaging was really good and the quality of the groceries were good as well.
+                    Lots of good stuff                    
+                    I Would definitely order again from here.</p>               
+                <h3>Nithya</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image\MicrosoftTeams-image (8).png" alt="">
+                <p>Great grocery store with a wide variety of items of all categories and offering local seafood and grass fed meats and also good variety of organic fruits and vegetables Nice place,Nice staff.</p>
+                <h3>Nithin</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image\MicrosoftTeams-image (6).png" alt="">
+                <p>My experience was very good with this grocery store.All are available in Reasonable price and coming to the package, all the goods were well packed!! Hoping to shop more!!</p>
+                <h3>Amulya</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <img src="image/pinky.png" alt="">
+                <p>We're weekly shoppers often finding everything from vegan meals. We buy here everything. The staff are always friendly and seem genuinely happy to help and be there if there is any.
+                </p>
+                <h3>Pinky</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- review section ends -->
+<!-- cart-->
+<h1 class="heading"> Your <span>CART</span> </h1>
+<div class="Cart-Container" style="background-color: white;">
+<section class="content-section container order" id="order" >
+<form action="/order" method="post">
+<div class="cart-row" >
+        <span class="cart-item cart-header cart-column" style="color: #27ae60; font-size: 27px;">ITEM</span>
+        <span class="cart-price cart-header cart-column" style="color: #27ae60;">PRICE</span>
+        <span class="cart-quantity cart-header cart-column"style="color: #27ae60;">QUANTITY</span>
+</div>   
+<div class="cart-items" style="color: #27ae60;">
+</div>
+<div class="cart-total" >
+    <span class="cart-total-title" style="color: #27ae60;">Total</span>
+    <span  class="cart-total-price" style="color: #27ae60;">₹0</span>
+</div>
+<button class="btn" name="Checkout">Checkout</button>
+</div> 
+</form>
+</section>
+<!-- cart ends-->
+<!-- footer section starts  -->
+<div class="Cart-Container" style="background-color: whitesmoke;"><br><br></div>
+<section class="footer">
+<div class="box-container">
+<div class="box">
+<h3>Groceriyo <i class="fas fa-shopping-basket"></i> </h3>
+<p>A complete place for the complete shopping.<br><br>  You can Follow us on:</p>
+<div class="share">
+    <a href="https://www.facebook.com/login.php" class="fab fa-facebook-f"></a>
+    <a href="https://twitter.com/?lang=en" class="fab fa-twitter"></a>
+    <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+    <a href="https://www.linkedin.com/login" class="fab fa-linkedin"></a>
+</div>
+</div>
+<div class="box">
+    <h3>contact info</h3>
+    <a href="#" class="links"> <i class="fas fa-phone"></i> 8946348341 </a>
+    <a href="#" class="links"> <i class="fas fa-phone"></i> +987-863-7383 </a>
+    <a href="#" class="links"> <i class="fas fa-envelope"></i> Groceriyo@gmail.com </a>
+    <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Vijaywada, India - 520001 </a>
+</div>
+<div class="box">
+    <h3>Customer Services </h3>
+    <a href="aboutus.html" class="links"><i class="fas fa-arrow-right"></i>About Us</a>
+    <a href="terms.html" class="links"><i class="fas fa-arrow-right"></i>Terms & Conditions</a>
+    <a href="privacy.html" class="links"><i class="fas fa-arrow-right"></i>Privacy Policy</a>
+</div>
+<script>
+    function myFunction() {
+      alert("Thanks for Subscribing!!");
+    }
+</script>
+        <div class="box">
+            <form class="container" id="myForm"   onsubmit="myFunction()">
+            <h3>newsletter</h3>
+            <p>subscribe for latest updates</p>
+            <input type="email" placeholder="your email" class="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.com" required title="Eg:abc@gmail.com">
+            <input type="submit" value="subscribe" class="btn">
+            <img src="image\payment.png" class="payment-img" alt="">
+            </form>
+        </div>
+    </div>
+    <div class="credit"> Created by <span>Groceriyo Team</span> | all rights reserved </div>
+</section>
+<!-- footer section ends -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

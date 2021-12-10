@@ -1,0 +1,46 @@
+<html>
+<head>
+<style>
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+padding:15px;
+}
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 15px;
+}
+th{
+background-color:#27ae60 ;
+}
+tr:nth-child(even) {
+background-color: rgb(216, 245, 216);
+}
+</style>
+</head>
+<body>
+<form action="/product" method="get">
+<table>
+<thead>
+<tr>
+<th>Product Name</th>
+<th>Category</th>
+<th>Strike Price</th>
+<th>Price</th>
+</tr></thead>
+<tbody>
+{{#products}}
+<tr>
+      <td>{{Product name}}</td>
+      <td>{{Category}}</td>
+      <td>₹{{Sprice}}/-</td>
+      <td>₹{{Price}}/-</td>
+</tr> 
+  {{/products}}
+   </tbody>           
+</table>
+</form>
+</body>
+</html>
