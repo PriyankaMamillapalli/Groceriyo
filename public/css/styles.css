@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+@font-face{
+    font-family: 'Booter - Zero Zero';
+    src: url('fonts/Booter - Zero Zero.woff') format('woff'),
+        url('Fonts/Booter - Zero Zero.woff2') format('woff2');
+        /* src: url('fonts/Booter\ -\ Zero\ Zero.woff') format('woff'),
+        url('Fonts/Booter\ -\ Zero\ Zero.woff2') format('woff2');*/
+        font-weight: normal;
+        font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: #777;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    color: #27ae60;
+}
+
+/* for all pages */
+.section-header{
+    
+    font-weight: normal;
+    text-align: center;
+    font-size: 4.5em;
+    color: black;
+}
+
+
+.cart-header{
+    font-weight: 900;
+    font-size: 1.2em;
+    color: black;
+}
+
+.cart-column{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row{
+    display: flex;
+}
+
+.cart-item{
+    width: 45%;
+    font-size: 2.2em;
+    color: #27ae60;
+}
+
+.cart-price{
+    width: 40%;
+    font-size: 3.2em;
+    color: black;
+}
+
+.cart-quantity{
+  width: 35% ;
+  font-size: 3.2em;
+  
+}
+
+.cart-item-title{
+    color: black;
+    margin: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image{
+    width: 75px;
+    height: auto;
+    border-radius: 100px;
+    border:.1rem #27ae60;
+    
+}
+
+
+
+.cart-quantity-input{
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #eee;
+    color: #0f212b;
+    padding: 0;
+    text-align: center;
+    font-size: 0.7em;
+    margin-right: 25px;
+
+}
+
+.cart-row:last-child{
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column{
+    border: none;    
+}
+
+.cart-total{
+  align-content: right;
+    margin-top: 100px;
+    margin-right: 10px;    
+}
+
+.cart-total-title{
+    color:black;
+    font-weight: bold;
+    font-size: 3.5em;
+    margin-right: 20px;
+}
+
+.cart-total-price{
+    color: black;
+    font-size: 2.1em;
+}
+
+.btn-purchase{
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
